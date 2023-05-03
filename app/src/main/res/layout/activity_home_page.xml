@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage">
+
+    <TextView
+        android:id="@+id/surfTracker_logo"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="36dp"
+        android:gravity="center"
+        android:text="@string/surf_tracker_label"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Log_new_sesh_button"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/log_new_session"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/surfTracker_logo" />
+
+    <Button
+        android:id="@+id/past_sesh_button"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/past_sessions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Log_new_sesh_button" />
+
+    <Button
+        android:id="@+id/Surf_conditions_button"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/surf_spot_conditions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/past_sesh_button" />
+
+    <Button
+        android:id="@+id/notes_button"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="36dp"
+        android:text="@string/notes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Surf_conditions_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

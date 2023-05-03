@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SurfTRAC</string>
+    <string name="password_login">Password</string>
+    <string name="user_name_login">User Name</string>
+    <string name="login_button">Login</string>
+    <string name="surf_tracker_label">Surf Tracker</string>
+    <string name="enter_a_username_editttext">Enter a Username</string>
+    <string name="enter_a_password_edittext">Enter a Password</string>
+    <string name="sign_up_Signup_pg_butto">Sign Up</string>
+    <string name="notes">Notes</string>
+    <string name="surf_spot_conditions">Surf Spot Conditions</string>
+    <string name="past_sessions">Past Sessions</string>
+    <string name="log_new_session">Log New Session</string>
+    <string name="log_out_from_menu">Log Out</string>
+    <string name="water_icon">water icon</string>
+</resources>
