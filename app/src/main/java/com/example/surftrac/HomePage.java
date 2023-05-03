@@ -21,7 +21,6 @@ public class HomePage extends AppCompatActivity {
         setContentView(R.layout.activity_home_page);
 
         Button mLogNewSession = findViewById(R.id.Log_new_sesh_button);
-
         mLogNewSession.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -30,7 +29,27 @@ public class HomePage extends AppCompatActivity {
             }
         });
 
+        Button mViewPastSessions = findViewById(R.id.past_sesh_button);
+        mViewPastSessions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomePage.this, ViewPastSession.class);
+                startActivity(intent);
+            }
+        });
+
+        Button mSurfSpot_Conditions = findViewById(R.id.Surf_conditions_button);
+        mSurfSpot_Conditions.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomePage.this, SurfSpotConditions.class);
+                startActivity(intent);
+            }
+        });
+
     }
+
+
 
     public static Intent intentFactory (Context context) {
         return new Intent(context, HomePage.class);
