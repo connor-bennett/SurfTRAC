@@ -5,7 +5,7 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Update;
 
-import com.example.surftrac.User;
+import com.example.surftrac.table_objects.User;
 
 @Dao
 public interface SurfTracDAO {

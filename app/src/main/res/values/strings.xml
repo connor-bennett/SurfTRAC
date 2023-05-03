@@ -13,4 +13,9 @@
     <string name="log_new_session">Log New Session</string>
     <string name="log_out_from_menu">Log Out</string>
     <string name="water_icon">water icon</string>
+    <string name="enter_swell_height_logSess">Enter Swell Height</string>
+    <string name="enter_swell_direction_logsess">Enter Swell Direction</string>
+    <string name="enter_tide_height_logsess">Enter Tide Height</string>
+    <string name="log_session_button">Log Session</string>
+    <string name="enter_swell_period_logsess">Enter Swell Period</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.example.surftrac;
+package com.example.surftrac.table_objects;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Entity;

@@ -7,9 +7,9 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
 
-import com.example.surftrac.Conditions;
-import com.example.surftrac.Surf_Log;
-import com.example.surftrac.User;
+import com.example.surftrac.table_objects.Conditions;
+import com.example.surftrac.table_objects.Surf_Log;
+import com.example.surftrac.table_objects.User;
 
 @TypeConverters({DateConverter.class, BoolConveter.class})
 @Database(entities = {User.class, Surf_Log.class, Conditions.class}, version = 1)

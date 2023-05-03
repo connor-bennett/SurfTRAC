@@ -3,7 +3,6 @@ package com.example.surftrac;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -13,29 +12,26 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class HomePage extends AppCompatActivity {
+public class LogNewSession extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_page);
+        setContentView(R.layout.activity_log_new_session);
 
-        Button mLogNewSession = findViewById(R.id.Log_new_sesh_button);
-
-        mLogNewSession.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(HomePage.this, LogNewSession.class);
-                startActivity(intent);
-            }
-        });
+// TODO set on click and intent to log the session use quereys
+//        Button mLogSession = findViewById(R.id.LogSess_Button);
+//
+//        mLogSession.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent();
+//
+//            }
+//        });
 
     }
-
-    public static Intent intentFactory (Context context) {
-        return new Intent(context, HomePage.class);
-    }
-
+// Menu item on create
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -45,28 +41,23 @@ public class HomePage extends AppCompatActivity {
 
     }
 
+    // Menu item log out functionality
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.sub_item_log_out:
                 Toast.makeText(this, "Clicked Log out", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(HomePage.this, MainActivity.class);
+                Intent intent = new Intent(LogNewSession.this, MainActivity.class);
                 startActivity(intent);
                 //TODO create Logout Method
                 return true;
             case R.id.sub_item_back:
-                Toast.makeText(this, "Cannot go back from HomePage", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Clicked back to last page", Toast.LENGTH_SHORT).show();
+                Intent intent_one = new Intent(LogNewSession.this, HomePage.class);
+                startActivity(intent_one);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
-
-
-//
-//    public static Intent intentFactory(Context context, int userId){
-//        Intent intent = new Intent(context, HomePage.class);
-//        // TODO I don't think I need this: intent.putExtra("userId", userId);
-//        return intent;
-//    }
-
 }
