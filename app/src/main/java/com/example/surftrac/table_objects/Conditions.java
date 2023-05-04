@@ -17,6 +17,16 @@ public class Conditions{
     int mIdealSwellDirection;
     int mIdealTide;
     int mUserId;
+    String mSpotName;
+
+    public Conditions(int idealSwellHeight, int idealSwellPeriod, int idealSwellDirection, int idealTide, int userId, String spotName) {
+        mIdealSwellHeight = idealSwellHeight;
+        mIdealSwellPeriod = idealSwellPeriod;
+        mIdealSwellDirection = idealSwellDirection;
+        mIdealTide = idealTide;
+        mUserId = userId;
+        mSpotName = spotName;
+    }
 
     public int getIdealSwellHeight() {
         return mIdealSwellHeight;
@@ -56,5 +66,13 @@ public class Conditions{
 
     public void setUserId(int userId) {
         mUserId = userId;
+    }
+
+    public String getSpotName() {
+        return mSpotName;
+    }
+
+    public void setSpotName(String spotName) {
+        mSpotName = spotName;
     }
 }

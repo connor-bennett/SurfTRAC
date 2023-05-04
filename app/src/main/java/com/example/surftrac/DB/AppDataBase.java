@@ -11,19 +11,21 @@ import com.example.surftrac.table_objects.Conditions;
 import com.example.surftrac.table_objects.Surf_Log;
 import com.example.surftrac.table_objects.User;
 
-@TypeConverters({DateConverter.class, BoolConveter.class})
+@TypeConverters({DateConverter.class})
 @Database(entities = {User.class, Surf_Log.class, Conditions.class}, version = 1)
 public abstract class AppDataBase extends RoomDatabase {
 
     public static final String DATABASE_NAME = "SURFTRAC_.db";
     public static final String USER_TABLE = "user_table";
-    public static final String LOG_TABLE = "surf_Log_table";
+    public static final String Surf_LOG_TABLE = "surf_Log_table";
     public static final String CONDITIONS_TABLE = "conditions_table";
 
     private static volatile AppDataBase instance;
     private static final Object LOCK = new Object();
 
-    public SurfTracDAO getSurfTracDAO;
+    public  abstract SurfLogDAO getSurfLogDAO();
+    public abstract UserDAO getUserDAO();
+    public abstract ConditionsDAO getConditionsDAO();
 
 
     public static AppDataBase getInstance(Context context) {

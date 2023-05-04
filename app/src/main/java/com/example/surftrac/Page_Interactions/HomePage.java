@@ -1,4 +1,4 @@
-package com.example.surftrac;
+package com.example.surftrac.Page_Interactions;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,7 +13,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.surftrac.R;
+
 public class HomePage extends AppCompatActivity {
+
+    private static final String LANDING_USERNAME = "com.example.surftrac.Page_Interactions.landingUsername";
+    private static final String ADMIN_CHECK = "com.example.surftrac.Page_Interactions.AdminCheck";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,11 +86,12 @@ public class HomePage extends AppCompatActivity {
     }
 
 
-//
-//    public static Intent intentFactory(Context context, int userId){
-//        Intent intent = new Intent(context, HomePage.class);
-//        // TODO I don't think I need this: intent.putExtra("userId", userId);
-//        return intent;
-//    }
+
+    public static Intent intentFactory(Context context,String username,  String admin){
+        Intent intent = new Intent(context, HomePage.class);
+        intent.putExtra(LANDING_USERNAME, username);
+        intent.putExtra(ADMIN_CHECK, admin);
+        return intent;
+    }
 
 }

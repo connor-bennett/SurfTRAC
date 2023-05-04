@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ViewPastSession">
+    tools:context=".Page_Interactions.ViewPastSession">
 
     <EditText
         android:id="@+id/editText2"

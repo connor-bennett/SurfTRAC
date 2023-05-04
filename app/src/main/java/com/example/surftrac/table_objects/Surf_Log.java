@@ -1,16 +1,13 @@
 package com.example.surftrac.table_objects;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-
-import android.os.Bundle;
 
 import com.example.surftrac.DB.AppDataBase;
 
 import java.util.Date;
 
-@Entity(tableName = AppDataBase.LOG_TABLE )
+@Entity(tableName = AppDataBase.Surf_LOG_TABLE)
 public class Surf_Log {
 
     @PrimaryKey(autoGenerate = true)

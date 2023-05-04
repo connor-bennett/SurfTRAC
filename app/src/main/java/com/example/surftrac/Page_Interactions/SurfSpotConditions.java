@@ -1,4 +1,4 @@
-package com.example.surftrac;
+package com.example.surftrac.Page_Interactions;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,12 +10,14 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-public class ViewPastSession extends AppCompatActivity {
+import com.example.surftrac.R;
+
+public class SurfSpotConditions extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_past_session);
+        setContentView(R.layout.activity_surf_spots);
     }
 
     // Menu item on create
@@ -34,13 +36,13 @@ public class ViewPastSession extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.sub_item_log_out:
                 Toast.makeText(this, "Clicked Log out", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(ViewPastSession.this, MainActivity.class);
+                Intent intent = new Intent(SurfSpotConditions.this, MainActivity.class);
                 startActivity(intent);
                 //TODO create Logout Method
                 return true;
             case R.id.sub_item_back:
                 Toast.makeText(this, "Clicked back to last page", Toast.LENGTH_SHORT).show();
-                Intent intent_one = new Intent(ViewPastSession.this, HomePage.class);
+                Intent intent_one = new Intent(SurfSpotConditions.this, HomePage.class);
                 startActivity(intent_one);
                 return true;
             default:

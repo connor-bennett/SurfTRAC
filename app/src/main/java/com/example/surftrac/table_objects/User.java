@@ -4,18 +4,19 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 import com.example.surftrac.DB.AppDataBase;
+import com.example.surftrac.DB.UserDAO;
 
 @Entity(tableName = AppDataBase.USER_TABLE)
 public class User {
 
     @PrimaryKey(autoGenerate = true)
     private int mUserId;
+
     private String mPassword;
     private String mUsername;
     private boolean mIsAdmin;
 
-    public User(int userId, String username, boolean isAdmin, String password) {
-        mUserId = userId;
+    public User(String username, String password, boolean isAdmin) {
         mPassword = password;
         mUsername = username;
         this.mIsAdmin = isAdmin;

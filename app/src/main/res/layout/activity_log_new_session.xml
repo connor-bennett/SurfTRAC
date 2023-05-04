@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LogNewSession">
+    tools:context=".Page_Interactions.LogNewSession">
 
     <TextView
         android:id="@+id/SurfTrackerLabel_LogSess"
@@ -18,6 +18,17 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/SpotName_LogSess"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:hint="@string/enter_spot_name_log_newSpot"
+        app:layout_constraintBottom_toTopOf="@+id/Log_sess_SwellHeight_edittext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/Log_sess_SwellHeight_edittext"
