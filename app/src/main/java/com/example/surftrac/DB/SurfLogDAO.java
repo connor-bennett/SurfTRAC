@@ -7,7 +7,6 @@ import androidx.room.Query;
 import androidx.room.Update;
 
 import com.example.surftrac.table_objects.Surf_Log;
-import com.example.surftrac.table_objects.User;
 
 import java.util.List;
 
@@ -20,13 +19,13 @@ public interface SurfLogDAO {
     @Delete
     void delete(Surf_Log surf_log);
 
-    @Query("SELECT * FROM " + AppDataBase.Surf_LOG_TABLE + " ORDER BY mDate desc")
+    @Query("SELECT * FROM " + AppDataBase.Surf_LOG_TABLE)
     List<Surf_Log> getAllSurfLogs();
 
     @Query("SELECT * FROM " + AppDataBase.Surf_LOG_TABLE + " WHERE mLogId = :logId")
     List<Surf_Log> getSurfLogById(int logId);
 
-    @Query("SELECT * FROM " + AppDataBase.Surf_LOG_TABLE + " WHERE mUserId = :UserId")
-    List<Surf_Log> getSurfLogByUserId(int UserId);
+    @Query("SELECT * FROM " + AppDataBase.Surf_LOG_TABLE + " WHERE mSpotName = :spotName")
+    List<Surf_Log> getSurfLogByUserId(String spotName);
 
 }

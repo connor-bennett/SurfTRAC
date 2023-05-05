@@ -12,6 +12,9 @@
         android:theme="@style/Theme.SurfTRAC"
         tools:targetApi="31">
         <activity
+            android:name=".Page_Interactions.Past_Sessions"
+            android:exported="false" />
+        <activity
             android:name=".Page_Interactions.ViewPastSession"
             android:exported="false" />
         <activity

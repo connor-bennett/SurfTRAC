@@ -16,16 +16,25 @@ public class Conditions{
     int mIdealSwellPeriod;
     int mIdealSwellDirection;
     int mIdealTide;
-    int mUserId;
     String mSpotName;
 
-    public Conditions(int idealSwellHeight, int idealSwellPeriod, int idealSwellDirection, int idealTide, int userId, String spotName) {
+    public Conditions(int idealSwellHeight, int idealSwellPeriod, int idealSwellDirection, int idealTide, String spotName) {
         mIdealSwellHeight = idealSwellHeight;
         mIdealSwellPeriod = idealSwellPeriod;
         mIdealSwellDirection = idealSwellDirection;
         mIdealTide = idealTide;
-        mUserId = userId;
         mSpotName = spotName;
+    }
+
+    @Override
+    public String toString() {
+        return "Conditions{" +
+                "mIdealSwellHeight=" + mIdealSwellHeight +
+                ", mIdealSwellPeriod=" + mIdealSwellPeriod +
+                ", mIdealSwellDirection=" + mIdealSwellDirection +
+                ", mIdealTide=" + mIdealTide +
+                ", mSpotName='" + mSpotName + '\'' +
+                '}';
     }
 
     public int getIdealSwellHeight() {
@@ -58,14 +67,6 @@ public class Conditions{
 
     public void setIdealTide(int idealTide) {
         mIdealTide = idealTide;
-    }
-
-    public int getUserId() {
-        return mUserId;
-    }
-
-    public void setUserId(int userId) {
-        mUserId = userId;
     }
 
     public String getSpotName() {

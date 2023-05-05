@@ -19,7 +19,7 @@ public class User {
     public User(String username, String password, boolean isAdmin) {
         mPassword = password;
         mUsername = username;
-        this.mIsAdmin = isAdmin;
+        mIsAdmin = isAdmin;
     }
 
     @Override
