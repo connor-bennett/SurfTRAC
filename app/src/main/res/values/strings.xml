@@ -19,4 +19,10 @@
     <string name="log_session_button">Log Session</string>
     <string name="enter_swell_period_logsess">Enter Swell Period</string>
     <string name="enter_spot_name_log_newSpot">Enter spot name</string>
+    <string name="place_holder_for_data_display">Place Holder for data display</string>
+    <string name="leave_blank_to_see_all">Leave blank to see all</string>
+    <string name="search_by_spot_name">Search by Spot name</string>
+    <string name="search_button">Search</string>
+    <string name="No_logs_message">No logs yet hit the waves!</string>
+    <string name="no_logs_for_location">\"No logs for \"</string>
 </resources>

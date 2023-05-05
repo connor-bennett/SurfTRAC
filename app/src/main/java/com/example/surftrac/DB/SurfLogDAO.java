@@ -26,6 +26,6 @@ public interface SurfLogDAO {
     List<Surf_Log> getSurfLogById(int logId);
 
     @Query("SELECT * FROM " + AppDataBase.Surf_LOG_TABLE + " WHERE mSpotName = :spotName")
-    List<Surf_Log> getSurfLogByUserId(String spotName);
+    List<Surf_Log> getSurfLogByLocation(String spotName);
 
 }
