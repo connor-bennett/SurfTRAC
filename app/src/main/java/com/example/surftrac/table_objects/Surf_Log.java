@@ -33,15 +33,12 @@ public class Surf_Log {
     @NonNull
     @Override
     public String toString() {
-        return "Surf_Log{" +
-                "mLogId=" + mLogId +
-                ", mSwellHeight=" + mSwellHeight +
-                ", mSwellPeriod=" + mSwellPeriod +
-                ", mSwellDirection='" + mSwellDirection + '\'' +
-                ", mTide=" + mTide +
-                ", mSpotName=" + mSpotName +
-                ", mDate=" + mDate +
-                '}';
+        return mDate + " \n" +
+                "Location: " + mSpotName + "\n" +
+                "Swell Height: " + mSwellHeight + "\n" +
+                "Swell Direction: " + mSwellDirection + "\n" +
+                "Swell Period: " + mSwellPeriod + "\n" +
+                "Tide: " + mTide;
     }
 
     public int getLogId() {
