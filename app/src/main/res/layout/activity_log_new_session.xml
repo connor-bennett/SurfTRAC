@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Page_Interactions.LogNewSession">
+
+    <TextView
+        android:id="@+id/SurfTrackerLabel_LogSess"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="52dp"
+        android:gravity="center"
+        android:text="@string/surf_tracker_label"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/SpotName_LogSess"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:hint="@string/enter_spot_name_log_newSpot"
+        app:layout_constraintBottom_toTopOf="@+id/Log_sess_SwellHeight_edittext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/Log_sess_SwellHeight_edittext"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="84dp"
+        android:gravity="center"
+        android:hint="@string/enter_swell_height_logSess"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SurfTrackerLabel_LogSess" />
+
+    <EditText
+        android:id="@+id/EnterSwellDir_logSess_edittext"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:hint="@string/enter_swell_direction_logsess"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Log_sess_SwellHeight_edittext" />
+
+    <EditText
+        android:id="@+id/Enter_tide_logsess_edittext"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:hint="@string/enter_tide_height_logsess"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SwellPeriod_logsess_edittext" />
+
+
+    <Button
+        android:id="@+id/LogSess_Button"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="52dp"
+        android:gravity="center"
+        android:text="@string/log_session_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Enter_tide_logsess_edittext" />
+
+    <EditText
+        android:id="@+id/SwellPeriod_logsess_edittext"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:hint="@string/enter_swell_period_logsess"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EnterSwellDir_logSess_edittext" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

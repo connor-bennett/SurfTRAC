@@ -1,4 +1,4 @@
-package com.example.surftrac;
+package com.example.surftrac.table_objects;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Entity;
@@ -16,7 +16,26 @@ public class Conditions{
     int mIdealSwellPeriod;
     int mIdealSwellDirection;
     int mIdealTide;
-    int mUserId;
+    String mSpotName;
+
+    public Conditions(int idealSwellHeight, int idealSwellPeriod, int idealSwellDirection, int idealTide, String spotName) {
+        mIdealSwellHeight = idealSwellHeight;
+        mIdealSwellPeriod = idealSwellPeriod;
+        mIdealSwellDirection = idealSwellDirection;
+        mIdealTide = idealTide;
+        mSpotName = spotName;
+    }
+
+    @Override
+    public String toString() {
+        return "Conditions{" +
+                "mIdealSwellHeight=" + mIdealSwellHeight +
+                ", mIdealSwellPeriod=" + mIdealSwellPeriod +
+                ", mIdealSwellDirection=" + mIdealSwellDirection +
+                ", mIdealTide=" + mIdealTide +
+                ", mSpotName='" + mSpotName + '\'' +
+                '}';
+    }
 
     public int getIdealSwellHeight() {
         return mIdealSwellHeight;
@@ -50,11 +69,11 @@ public class Conditions{
         mIdealTide = idealTide;
     }
 
-    public int getUserId() {
-        return mUserId;
+    public String getSpotName() {
+        return mSpotName;
     }
 
-    public void setUserId(int userId) {
-        mUserId = userId;
+    public void setSpotName(String spotName) {
+        mSpotName = spotName;
     }
 }

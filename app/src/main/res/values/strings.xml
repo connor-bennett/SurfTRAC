@@ -7,10 +7,16 @@
     <string name="enter_a_username_editttext">Enter a Username</string>
     <string name="enter_a_password_edittext">Enter a Password</string>
     <string name="sign_up_Signup_pg_butto">Sign Up</string>
-    <string name="notes">Notes</string>
+    <string name="LiveBuoyData">Buoy Data</string>
     <string name="surf_spot_conditions">Surf Spot Conditions</string>
     <string name="past_sessions">Past Sessions</string>
     <string name="log_new_session">Log New Session</string>
     <string name="log_out_from_menu">Log Out</string>
     <string name="water_icon">water icon</string>
+    <string name="enter_swell_height_logSess">Enter Swell Height</string>
+    <string name="enter_swell_direction_logsess">Enter Swell Direction</string>
+    <string name="enter_tide_height_logsess">Enter Tide Height</string>
+    <string name="log_session_button">Log Session</string>
+    <string name="enter_swell_period_logsess">Enter Swell Period</string>
+    <string name="enter_spot_name_log_newSpot">Enter spot name</string>
 </resources>

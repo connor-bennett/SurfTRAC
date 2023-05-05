@@ -12,25 +12,34 @@
         android:theme="@style/Theme.SurfTRAC"
         tools:targetApi="31">
         <activity
-            android:name=".Surf_Log"
+            android:name=".Page_Interactions.Past_Sessions"
             android:exported="false" />
         <activity
-            android:name=".Conditions"
+            android:name=".Page_Interactions.ViewPastSession"
             android:exported="false" />
         <activity
-            android:name=".HomePage"
+            android:name=".Page_Interactions.LogNewSession"
             android:exported="false" />
         <activity
-            android:name=".SurfSpots"
+            android:name=".table_objects.Surf_Log"
             android:exported="false" />
         <activity
-            android:name=".SignUp"
+            android:name=".table_objects.Conditions"
             android:exported="false" />
         <activity
-            android:name=".Login"
+            android:name=".Page_Interactions.HomePage"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Page_Interactions.SurfSpotConditions"
+            android:exported="false" />
+        <activity
+            android:name=".Page_Interactions.SignUp"
+            android:exported="false" />
+        <activity
+            android:name=".Page_Interactions.Login"
+            android:exported="false" />
+        <activity
+            android:name=".Page_Interactions.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

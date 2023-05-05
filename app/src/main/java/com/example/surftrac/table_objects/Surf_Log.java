@@ -1,34 +1,47 @@
-package com.example.surftrac;
+package com.example.surftrac.table_objects;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-
-import android.os.Bundle;
 
 import com.example.surftrac.DB.AppDataBase;
 
 import java.util.Date;
 
-@Entity(tableName = AppDataBase.LOG_TABLE )
+@Entity(tableName = AppDataBase.Surf_LOG_TABLE)
 public class Surf_Log {
 
     @PrimaryKey(autoGenerate = true)
     private int mLogId;
+
     private int mSwellHeight;
     private int mSwellPeriod;
     private String mSwellDirection;
+    private String mSpotName;
     private int mTide;
     private Date mDate;
-    private int mUserId;
 
-    public Surf_Log(int swellHeight, int swellPeriod, String swellDirection, int tide, int userId) {
+    public Surf_Log(int swellHeight, int swellPeriod, String swellDirection, String spotName, int tide) {
         mSwellHeight = swellHeight;
         mSwellPeriod = swellPeriod;
         mSwellDirection = swellDirection;
+        mSpotName = spotName;
         mTide = tide;
         mDate = new Date();
-        mUserId = userId;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return "Surf_Log{" +
+                "mLogId=" + mLogId +
+                ", mSwellHeight=" + mSwellHeight +
+                ", mSwellPeriod=" + mSwellPeriod +
+                ", mSwellDirection='" + mSwellDirection + '\'' +
+                ", mTide=" + mTide +
+                ", mSpotName=" + mSpotName +
+                ", mDate=" + mDate +
+                '}';
     }
 
     public int getLogId() {
@@ -63,6 +76,12 @@ public class Surf_Log {
         mSwellDirection = swellDirection;
     }
 
+    public String getSpotName() {
+        return mSpotName;
+    }
+    public void setSpotName(String spotName) {
+        mSpotName = spotName;
+    }
     public int getTide() {
         return mTide;
     }
@@ -79,12 +98,5 @@ public class Surf_Log {
         mDate = date;
     }
 
-    public int getUserId() {
-        return mUserId;
-    }
-
-    public void setUserId(int userId) {
-        mUserId = userId;
-    }
 
 }

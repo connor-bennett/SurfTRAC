@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "a33b5c295bef1bf99afcc9c0ffa8a225",
+    "identityHash": "68f91c28ada4686d82bed8fff95bb11f",
     "entities": [
       {
         "tableName": "user_table",
@@ -44,7 +44,7 @@
       },
       {
         "tableName": "surf_Log_table",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`mLogId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `mSwellHeight` INTEGER NOT NULL, `mSwellPeriod` INTEGER NOT NULL, `mSwellDirection` TEXT, `mTide` INTEGER NOT NULL, `mDate` INTEGER, `mUserId` INTEGER NOT NULL)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`mLogId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `mSwellHeight` INTEGER NOT NULL, `mSwellPeriod` INTEGER NOT NULL, `mSwellDirection` TEXT, `mSpotName` TEXT, `mTide` INTEGER NOT NULL, `mDate` INTEGER)",
         "fields": [
           {
             "fieldPath": "mLogId",
@@ -71,6 +71,12 @@
             "notNull": false
           },
           {
+            "fieldPath": "mSpotName",
+            "columnName": "mSpotName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
             "fieldPath": "mTide",
             "columnName": "mTide",
             "affinity": "INTEGER",
@@ -81,12 +87,6 @@
             "columnName": "mDate",
             "affinity": "INTEGER",
             "notNull": false
-          },
-          {
-            "fieldPath": "mUserId",
-            "columnName": "mUserId",
-            "affinity": "INTEGER",
-            "notNull": true
           }
         ],
         "primaryKey": {
@@ -100,7 +100,7 @@
       },
       {
         "tableName": "conditions_table",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`mIdealSwellHeight` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `mIdealSwellPeriod` INTEGER NOT NULL, `mIdealSwellDirection` INTEGER NOT NULL, `mIdealTide` INTEGER NOT NULL, `mUserId` INTEGER NOT NULL)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`mIdealSwellHeight` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `mIdealSwellPeriod` INTEGER NOT NULL, `mIdealSwellDirection` INTEGER NOT NULL, `mIdealTide` INTEGER NOT NULL, `mSpotName` TEXT)",
         "fields": [
           {
             "fieldPath": "mIdealSwellHeight",
@@ -127,10 +127,10 @@
             "notNull": true
           },
           {
-            "fieldPath": "mUserId",
-            "columnName": "mUserId",
-            "affinity": "INTEGER",
-            "notNull": true
+            "fieldPath": "mSpotName",
+            "columnName": "mSpotName",
+            "affinity": "TEXT",
+            "notNull": false
           }
         ],
         "primaryKey": {
@@ -146,7 +146,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a33b5c295bef1bf99afcc9c0ffa8a225')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '68f91c28ada4686d82bed8fff95bb11f')"
     ]
   }
 }
