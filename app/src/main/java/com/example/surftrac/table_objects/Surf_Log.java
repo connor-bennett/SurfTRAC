@@ -38,7 +38,8 @@ public class Surf_Log {
                 "Swell Height: " + mSwellHeight + "\n" +
                 "Swell Direction: " + mSwellDirection + "\n" +
                 "Swell Period: " + mSwellPeriod + "\n" +
-                "Tide: " + mTide;
+                "Tide: " + mTide + "\n" +
+                "-------------------------------------------" +"\n";
     }
 
     public int getLogId() {

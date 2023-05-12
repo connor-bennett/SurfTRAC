@@ -10,7 +10,7 @@
         android:id="@+id/textView4"
         android:layout_width="300dp"
         android:layout_height="100dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="@string/surf_tracker_label"
         android:textSize="24sp"
@@ -20,14 +20,29 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/DisplayConditions"
         android:layout_width="300dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="124dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="16dp"
+        android:textSize="24sp"
         android:gravity="center"
-        android:text="Place Holder for Ideal Conditions"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/EditConditions_linkButton"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        android:text="Edit Conditions"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DisplayConditions"
+        android:visibility="invisible"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

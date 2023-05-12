@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "68f91c28ada4686d82bed8fff95bb11f",
+    "identityHash": "801e214b0e528a00682e6a7275a87ffb",
     "entities": [
       {
         "tableName": "user_table",
@@ -100,7 +100,7 @@
       },
       {
         "tableName": "conditions_table",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`mIdealSwellHeight` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `mIdealSwellPeriod` INTEGER NOT NULL, `mIdealSwellDirection` INTEGER NOT NULL, `mIdealTide` INTEGER NOT NULL, `mSpotName` TEXT)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`mIdealSwellHeight` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `mIdealSwellPeriod` INTEGER NOT NULL, `mIdealSwellDirection` TEXT, `mIdealTide` INTEGER NOT NULL, `mSpotName` TEXT)",
         "fields": [
           {
             "fieldPath": "mIdealSwellHeight",
@@ -117,8 +117,8 @@
           {
             "fieldPath": "mIdealSwellDirection",
             "columnName": "mIdealSwellDirection",
-            "affinity": "INTEGER",
-            "notNull": true
+            "affinity": "TEXT",
+            "notNull": false
           },
           {
             "fieldPath": "mIdealTide",
@@ -146,7 +146,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '68f91c28ada4686d82bed8fff95bb11f')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '801e214b0e528a00682e6a7275a87ffb')"
     ]
   }
 }
