@@ -4,47 +4,63 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F4F2EE"
     tools:context=".Page_Interactions.Login">
+
 
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="300dp"
         android:layout_height="100dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="16dp"
+        android:alpha="2"
         android:gravity="center"
         android:text="@string/surf_tracker_label"
         android:textSize="24sp"
+        android:fontFamily="@font/im_fell_great_primer_sc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/backgroundimg"
+        android:alpha=".88"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/username_edittext"
-        android:inputType="textPersonName"
         android:layout_width="300dp"
         android:layout_height="100dp"
-        android:hint="@string/user_name_login"
+        android:layout_marginTop="196dp"
         android:gravity="center"
+        android:hint="@string/user_name_login"
+        android:inputType="textPersonName"
+        android:fontFamily="@font/im_fell_great_primer_sc"
         android:textSize="20sp"
-        android:layout_marginTop="136dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
-        android:inputType="textPassword"
         android:id="@+id/Password_edittext"
         android:layout_width="300dp"
         android:layout_height="100dp"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="308dp"
         android:gravity="center"
         android:hint="@string/password_login"
+        android:inputType="textPassword"
         android:textSize="20sp"
+        android:fontFamily="@font/im_fell_great_primer_sc"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -53,10 +69,13 @@
         android:layout_width="300dp"
         android:layout_height="100dp"
         android:text="@string/login_button"
+        android:backgroundTint="@color/green"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        android:fontFamily="@font/im_fell_great_primer_sc"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Password_edittext"
-        />
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,6 +10,7 @@ import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.surftrac.DB.AppDataBase;
@@ -82,6 +83,8 @@ public class Login extends AppCompatActivity {
         Button mLogin = findViewById(R.id.loginButton_logPg);
         nameInput = findViewById(R.id.username_edittext);
         mPassword = findViewById(R.id.Password_edittext);
+        TextView Logo = findViewById(R.id.textView2);
+        Logo.bringToFront();
 
         mLogin.setOnClickListener(new View.OnClickListener() {
             @Override
