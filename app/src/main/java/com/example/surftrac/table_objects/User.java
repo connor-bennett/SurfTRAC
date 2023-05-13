@@ -11,7 +11,6 @@ public class User {
 
     @PrimaryKey(autoGenerate = true)
     private int mUserId;
-
     private String mPassword;
     private String mUsername;
     private boolean mIsAdmin;

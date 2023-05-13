@@ -6,9 +6,11 @@ import androidx.room.Room;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.surftrac.DB.AppDataBase;
@@ -23,8 +25,8 @@ public class Login extends AppCompatActivity {
     private EditText nameInput;
     private EditText mPassword;
     private String mUserId;
-    private User mUser;
-    private String adminTest;
+    public User mUser;
+    public  boolean adminTest;
 
     private String mUserNameString;
     private String mPasswordString;
@@ -63,7 +65,7 @@ public class Login extends AppCompatActivity {
             Toast.makeText(this, "No user found by the name " + mUserNameString, Toast.LENGTH_SHORT).show();
             return false;
         }
-        adminTest = mUser.isAdmin() + "";
+        adminTest = mUser.isAdmin();
         return true;
     }
 
@@ -75,13 +77,14 @@ public class Login extends AppCompatActivity {
         getDatabase();
         getDefaultUsers();
         wireUpDisplay();
-
     }
 
     private void wireUpDisplay(){
         Button mLogin = findViewById(R.id.loginButton_logPg);
         nameInput = findViewById(R.id.username_edittext);
         mPassword = findViewById(R.id.Password_edittext);
+        TextView Logo = findViewById(R.id.textView2);
+        Logo.bringToFront();
 
         mLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,6 +95,8 @@ public class Login extends AppCompatActivity {
                         Toast.makeText(Login.this, "Invalid Password", Toast.LENGTH_SHORT).show();
                     } else{
                         Intent intent = HomePage.intentFactory(getApplicationContext(), mUserNameString, adminTest);
+                        intent.putExtra("Key", adminTest);
+                        intent.putExtra("user", mUserNameString);
                         startActivity(intent);
                     }
                 }

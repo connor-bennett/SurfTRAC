@@ -6,11 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".Page_Interactions.ViewPastSession">
 
-    <EditText
+    <TextView
         android:id="@+id/editText2"
         android:layout_width="300dp"
         android:layout_height="100dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="@string/surf_tracker_label"
         android:textSize="24sp"
@@ -20,11 +20,43 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/Display_past_sessions"
+        android:layout_width="350dp"
+        android:layout_height="270dp"
+        android:layout_marginBottom="56dp"
+        app:layout_constraintBottom_toTopOf="@+id/Leaveblanktoseeall_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Leaveblanktoseeall_textview"
+        android:layout_width="300dp"
+        android:layout_height="20dp"
+        android:text="@string/leave_blank_to_see_all"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/Search_by_spot_name_edittext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/Search_by_spot_name_edittext"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="324dp"
+        android:gravity="center"
+        android:hint="@string/search_by_spot_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+    <Button
+        android:id="@+id/Search_button_pastSesh"
         android:layout_width="300dp"
         android:layout_height="100dp"
-        android:layout_marginTop="132dp"
-        android:text="Place Holder for data display"
-        android:gravity="center"
+        android:layout_marginTop="372dp"
+        android:text="@string/search_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"

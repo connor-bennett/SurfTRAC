@@ -76,7 +76,6 @@ public class LogNewSession extends AppCompatActivity {
                 mSwellPeriod.setText("");
                 mTide.setText("");
                 mSpotName.setText("");
-                mLogSession.setText("");
 
             }
         });
@@ -98,8 +97,6 @@ public class LogNewSession extends AppCompatActivity {
             mIntSwellPeriod = parseInt(mStringSwellPeriod);
             mIntTide = parseInt(mStringTide);
         }
-
-
     }
 
     @Override
@@ -109,7 +106,6 @@ public class LogNewSession extends AppCompatActivity {
 
         getDatabase();
         wireUpDisplay();
-
     }
 
     // Store Default Users and get db
@@ -126,9 +122,6 @@ public class LogNewSession extends AppCompatActivity {
         surfLogDAO_AccessPoint.insert(log);
     }
 
-
-
-
 // Menu item on create
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -139,7 +132,7 @@ public class LogNewSession extends AppCompatActivity {
 
     }
 
-    // Menu item log out functionality
+    // Menu item log out functionality back
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){

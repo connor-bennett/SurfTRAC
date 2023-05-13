@@ -14,11 +14,11 @@ public class Conditions{
 
     int mIdealSwellHeight;
     int mIdealSwellPeriod;
-    int mIdealSwellDirection;
+    String mIdealSwellDirection;
     int mIdealTide;
     String mSpotName;
 
-    public Conditions(int idealSwellHeight, int idealSwellPeriod, int idealSwellDirection, int idealTide, String spotName) {
+    public Conditions(int idealSwellHeight, int idealSwellPeriod, String idealSwellDirection, int idealTide, String spotName) {
         mIdealSwellHeight = idealSwellHeight;
         mIdealSwellPeriod = idealSwellPeriod;
         mIdealSwellDirection = idealSwellDirection;
@@ -28,13 +28,11 @@ public class Conditions{
 
     @Override
     public String toString() {
-        return "Conditions{" +
-                "mIdealSwellHeight=" + mIdealSwellHeight +
-                ", mIdealSwellPeriod=" + mIdealSwellPeriod +
-                ", mIdealSwellDirection=" + mIdealSwellDirection +
-                ", mIdealTide=" + mIdealTide +
-                ", mSpotName='" + mSpotName + '\'' +
-                '}';
+        return "Location: " + mSpotName + "\n" +
+                "Sewell Height: " + mIdealSwellHeight + "\n" +
+                "Swell Direction: " + mIdealSwellDirection +"\n" +
+                "Swell Period: " + mIdealSwellPeriod + "\n" +
+                "Tide: " + mIdealTide + "\n" + "------------------" +"\n";
     }
 
     public int getIdealSwellHeight() {
@@ -53,11 +51,11 @@ public class Conditions{
         mIdealSwellPeriod = idealSwellPeriod;
     }
 
-    public int getIdealSwellDirection() {
+    public String getIdealSwellDirection() {
         return mIdealSwellDirection;
     }
 
-    public void setIdealSwellDirection(int idealSwellDirection) {
+    public void setIdealSwellDirection(String idealSwellDirection) {
         mIdealSwellDirection = idealSwellDirection;
     }
 

@@ -19,4 +19,20 @@
     <string name="log_session_button">Log Session</string>
     <string name="enter_swell_period_logsess">Enter Swell Period</string>
     <string name="enter_spot_name_log_newSpot">Enter spot name</string>
+    <string name="place_holder_for_data_display">Place Holder for data display</string>
+    <string name="leave_blank_to_see_all">Leave blank to see all</string>
+    <string name="search_by_spot_name">Search by Spot name</string>
+    <string name="search_button">Search</string>
+    <string name="No_logs_message">No logs yet hit the waves!</string>
+    <string name="no_logs_for_location">\"No logs for \"</string>
+    <string name="No_conds_listed">No Ideal Conditions listed</string>
+    <string name="fill_out_conditions_to_add_a_spot">Fill out Conditions to add a spot</string>
+    <string name="spot_name">Spot Name</string>
+    <string name="swell_height">Swell Height</string>
+    <string name="swell_period">Swell Period</string>
+    <string name="swell_direction">Swell Direction</string>
+    <string name="tide">Tide</string>
+    <string name="add">Add</string>
+    <string name="delete">Delete</string>
+    <string name="edit_conditions">Edit Conditions</string>
 </resources>

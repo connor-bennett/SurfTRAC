@@ -1,5 +1,7 @@
 package com.example.surftrac.Page_Interactions;
 
+import static android.view.View.VISIBLE;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,19 +13,33 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.surftrac.R;
 
 public class HomePage extends AppCompatActivity {
 
-    private static final String LANDING_USERNAME = "com.example.surftrac.Page_Interactions.landingUsername";
-    private static final String ADMIN_CHECK = "com.example.surftrac.Page_Interactions.AdminCheck";
+    Button mEditConds;
+    TextView mWelcomeMsg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
+
+        mEditConds = findViewById(R.id.Edit_Conds_for_admin);
+
+        Intent intent = getIntent();
+        boolean adminCheck = intent.getBooleanExtra("Key", false);
+        String userName = intent.getStringExtra("user");
+
+        mWelcomeMsg = findViewById(R.id.welcomeMsg);
+        mWelcomeMsg.setText(userName);
+
+        Toast.makeText(this, "" + adminCheck, Toast.LENGTH_SHORT).show();
+
+        checkForAdmin(adminCheck);
 
         Button mLogNewSession = findViewById(R.id.Log_new_sesh_button);
         mLogNewSession.setOnClickListener(new View.OnClickListener() {
@@ -52,9 +68,21 @@ public class HomePage extends AppCompatActivity {
             }
         });
 
+        mEditConds.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomePage.this, EditConditions.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
-
+    public void checkForAdmin(boolean admin){
+        if(!admin){
+            mEditConds.setVisibility(View.INVISIBLE);
+        }
+    }
 
     public static Intent intentFactory (Context context) {
         return new Intent(context, HomePage.class);
@@ -86,12 +114,12 @@ public class HomePage extends AppCompatActivity {
     }
 
 
-
-    public static Intent intentFactory(Context context,String username,  String admin){
+    public static Intent intentFactory(Context context, String username, boolean admin) {
         Intent intent = new Intent(context, HomePage.class);
-        intent.putExtra(LANDING_USERNAME, username);
-        intent.putExtra(ADMIN_CHECK, admin);
+        intent.putExtra("Username", username);
+        intent.putExtra("Admin", admin);
         return intent;
     }
+
 
 }
